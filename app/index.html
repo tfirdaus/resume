@@ -55,6 +55,26 @@
       <div class="site-content" id="content">
         <div class="container">
 
+          <# if ( resume.volunteer ) { #>
+          <section class="content-section content-section--projects" id="content-volunteer">
+            <h3 class="content-section__header">Volunteer</h3>
+            <# _.each( resume.volunteer.reverse(), function( volunteer ) { #>
+            <div class="volunteer row">
+              <div class="volunteer__logo column column-left">
+                <# if ( volunteer.organization.image ) { #>
+                  <img src="{{ volunteer.organization.image }}" alt="">
+                <# } #>
+              </div>
+              <div class="volunteer__summary column column-right">
+                <h4 class="volunteer__title"><a href="{{ volunteer.url }}" class="volunteer__url" target="_blank">{{ volunteer.title }}</a></h4>
+                <h5 class="volunteer__organization"><a href="{{ volunteer.organization.url }}" class="volunteer__organization-url">{{ volunteer.organization.title }}</a> / <span class="volunteer__date">{{ volunteer.date.start }} &dash; <# if ( volunteer.date.end ) { #>{{ volunteer.date.end }}<# } else { #>Present<# } #></span></h5>
+                <p class="volunteer__description">{{ volunteer.description }}</p>
+              </div>
+            </div>
+            <# } ); #>
+          </section>
+          <# } #>
+
           <# if ( resume.employments ) { #>
           <section class="content-section content-section--employments" id="content-employments">
             <h3 class="content-section__header">Employments</h3>
@@ -98,26 +118,6 @@
                 <h4 class="project__title"><a href="{{ project.url }}" class="project__url" target="_blank">{{ project.title }}</a></h4>
                 <h5 class="project__organization"><a href="{{ project.organization.url }}" class="project__organization-url">{{ project.organization.title }}</a> / <span class="project__date">{{ project.date.start }} &dash; <# if ( project.date.end ) { #>{{ project.date.end }}<# } else { #>Present<# } #></span></h5>
                 <p class="project__description">{{ project.description }}</p>
-              </div>
-            </div>
-            <# } ); #>
-          </section>
-          <# } #>
-
-          <# if ( resume.volunteer ) { #>
-          <section class="content-section content-section--projects" id="content-volunteer">
-            <h3 class="content-section__header">Volunteer</h3>
-            <# _.each( resume.volunteer.reverse(), function( volunteer ) { #>
-            <div class="volunteer row">
-              <div class="volunteer__logo column column-left">
-                <# if ( volunteer.organization.image ) { #>
-                  <img src="{{ volunteer.organization.image }}" alt="">
-                <# } #>
-              </div>
-              <div class="volunteer__summary column column-right">
-                <h4 class="volunteer__title"><a href="{{ volunteer.url }}" class="volunteer__url" target="_blank">{{ volunteer.title }}</a></h4>
-                <h5 class="volunteer__organization"><a href="{{ volunteer.organization.url }}" class="volunteer__organization-url">{{ volunteer.organization.title }}</a> / <span class="volunteer__date">{{ volunteer.date.start }} &dash; <# if ( volunteer.date.end ) { #>{{ volunteer.date.end }}<# } else { #>Present<# } #></span></h5>
-                <p class="volunteer__description">{{ volunteer.description }}</p>
               </div>
             </div>
             <# } ); #>
