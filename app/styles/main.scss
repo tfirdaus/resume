@@ -129,17 +129,28 @@ body {
 }
 
 .row {
-  display: flex;
   padding: 60px 0;
+  @media screen and (min-width: 640px) {
+    display: flex;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-light;
+  }
 }
 
 .column.column-left {
-  width: 30%;
-  padding-right: 60px;
+  width: 100%;
+  @media screen and (min-width: 640px) {
+    width: 30%;
+    padding-right: 30px;
+  }
 }
 .column.column-right {
-  width: 70%;
-  padding-left: 30px;
+  width: 100%;
+  @media screen and (min-width: 640px) {
+    width: 70%;
+    padding-left: 30px;
+  }
 }
 
 .social-media {
@@ -180,8 +191,10 @@ body {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
   &__summary {
-    max-width: 80%;
     flex-wrap: wrap;
+    @media screen and (min-width: 640px) {
+      max-width: 80%;
+    }
   }
   &__title,
   &__subtitle {
@@ -237,7 +250,6 @@ body {
     padding-left: 30px;
     border-left: 3px solid $gray-light;
     cite {
-      font-size: 0.73em;
       margin-top: 15px;
       display: block;
     }
@@ -289,5 +301,13 @@ body {
     &:hover {
       color: $gray-dark;
     }
+  }
+}
+.employment,
+.project,
+.volunteer {
+  &__logo {
+    max-width: 250px;
+    margin-bottom: 60px;
   }
 }
