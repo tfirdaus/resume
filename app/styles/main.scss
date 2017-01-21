@@ -1,0 +1,293 @@
+@import '../../bower_components/normalize-scss/sass/normalize/import-now';
+
+$base-font-size: 22;
+$base-line-height: 1.5;
+$leading: $base-line-height * 1rem;
+$scale: 1.414;
+
+$primary: #56c1ab;
+$gray-dark: #333;
+$gray: #999;
+$gray-light: #eee;
+
+html {
+    font-family: serif;
+    font-size: $base-font-size / 16 * 100%;
+    -webkit-font-smoothing: antialiased;
+}
+p {
+    line-height: $leading;
+    margin-top: $leading;
+    margin-bottom: 0;
+}
+ul,
+ol {
+    margin-top: $leading;
+    margin-bottom: $leading;
+    li {
+        line-height: $leading;
+    }
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+blockquote {
+    line-height: $leading;
+    margin-top: $leading;
+    margin-bottom: $leading;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: $leading;
+    margin-bottom: 0;
+    line-height: $leading;
+    font-weight: 700;
+}
+h1 {
+    font-size: 3 * $scale * 1rem;
+    line-height: 3 * $leading;
+    margin-top: 2 * $leading;
+}
+h2 {
+    font-size: 2 * $scale * 1rem;
+    line-height: 2 * $leading;
+    margin-top: 2 * $leading;
+}
+h3 {
+    font-size: 1 * $scale * 1rem;
+}
+h4 {
+    font-size: $scale / 2 * 1rem;
+}
+h5 {
+    font-size: $scale / 3 * 1rem;
+}
+h6 {
+    font-size: $scale / 4 * 1rem;
+}
+table {
+    margin-top: $leading;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+    line-height: $base-line-height * $base-font-size - 0px;
+}
+code {
+    vertical-align: bottom;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background: #fafafa;
+  font-family: 'Roboto Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: $gray-dark;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+}
+
+.button {
+  background: transparent;
+  border: 3px solid $gray;
+  color: $gray;
+  text-decoration: none;
+  padding: 18px 42px;
+  &--primary {
+    color: #fff;
+    border-color: $primary;
+    background-color: $primary;
+    &:hover {
+      border-color: darken( $primary, 10% );
+      background-color: darken( $primary, 10% );
+    }
+  }
+}
+
+.row {
+  display: flex;
+  padding: 60px 0;
+}
+
+.column.column-left {
+  width: 30%;
+  padding-right: 60px;
+}
+.column.column-right {
+  width: 70%;
+  padding-left: 30px;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  a {
+    display: block;
+    &:hover svg {
+      fill: $gray-dark;
+    }
+  }
+  li {
+    display: inline-block;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: $gray;
+  }
+}
+
+.site-header {
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+  .container {
+    z-index: 10;
+  }
+  &__avatar {
+    margin: 0;
+    position: absolute;
+    transform: translate3d(0, 30%, 0);
+  }
+  &__avatar img {
+    max-width: 100%;
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  &__summary {
+    max-width: 80%;
+    flex-wrap: wrap;
+  }
+  &__title,
+  &__subtitle {
+    width: 100%;
+    flex: 0 1 100%;
+    line-height: normal;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.86em;
+  }
+  &__subtitle {
+    margin: 12px 0 0;
+    font-size: 2.34em;
+  }
+  &__description {
+    color: $gray;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.site-content {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.content-section {
+  &__header {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $gray-light;
+  }
+}
+.employment {
+  &__recommendation {
+    margin-top: 60px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 0.75em;
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 30px;
+    border-left: 3px solid $gray-light;
+    cite {
+      font-size: 0.73em;
+      margin-top: 15px;
+      display: block;
+    }
+  }
+}
+.employment,
+.volunteer {
+  &__organization {
+    font-size: 1.1em;
+    margin: 0 0 7px 0;
+  }
+  &__organization-url {
+    text-decoration: none;
+    color: $gray-dark;
+    &:hover {
+      color: $primary;
+    }
+  }
+  &__title {
+    font-size: 0.8em;
+    margin: 0 0 15px;
+    color: $gray;
+    font-weight: 400;
+  }
+}
+.project,
+.volunteer {
+  &__title {
+    font-size: 1.1em;
+    margin: 0 0 7px 0;
+    font-weight: 700;
+  }
+  &__organization {
+    font-size: 0.8em;
+    margin: 0 0 15px;
+    color: $gray;
+    font-weight: 400;
+  }
+  &__url {
+    text-decoration: none;
+    color: $gray-dark;
+    &:hover {
+      color: $primary;
+    }
+  }
+  &__organization-url {
+    text-decoration: none;
+    color: $gray;
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+}
