@@ -111,6 +111,13 @@ body {
   position: relative;
 }
 
+.sub-heading {
+  font-size: 0.8em;
+  margin: 0 0 15px;
+  color: $gray;
+  font-weight: 500;
+}
+
 .button {
   background: transparent;
   border: 3px solid $gray;
@@ -227,7 +234,7 @@ body {
 
 .site-content {
   margin-top: 120px;
-  margin-bottom: 120px;
+  margin-bottom: 30px;
 }
 
 .content-section {
@@ -244,13 +251,14 @@ body {
     margin-top: 60px;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 0.75em;
-    font-style: italic;
     margin-left: 0;
     padding-left: 30px;
     border-left: 3px solid $gray-light;
     cite {
+      font-size: 0.85em;
       margin-top: 15px;
       display: block;
+      font-weight: 700;
     }
   }
 }
@@ -267,12 +275,6 @@ body {
       color: $primary;
     }
   }
-  &__title {
-    font-size: 0.8em;
-    margin: 0 0 15px;
-    color: $gray;
-    font-weight: 400;
-  }
 }
 .project,
 .volunteer {
@@ -280,12 +282,6 @@ body {
     font-size: 1.1em;
     margin: 0 0 7px 0;
     font-weight: 700;
-  }
-  &__organization {
-    font-size: 0.8em;
-    margin: 0 0 15px;
-    color: $gray;
-    font-weight: 400;
   }
   &__url {
     text-decoration: none;
@@ -309,4 +305,7 @@ body {
     max-width: 250px;
     margin-bottom: 60px;
   }
+}
+.skills {
+  padding: 60px 150px;
 }

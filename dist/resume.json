@@ -105,7 +105,7 @@
     {
       "organization": {
         "title": "Tuts+",
-        "url": "http://webdesign.tutsplus.com/",
+        "url": "https://tutsplus.com/authors/tfirdaus",
         "office": "Melbourne, Australia",
         "image": "./images/logo-envato.svg"
       },
@@ -128,7 +128,7 @@
       },
       "role": {
         "title": "Web Developer",
-        "description": "Upgraded and optimized the Hongkiat.com website to follow modern web design standards. Revamped the WordPress theme used at Hongkiat.com with WP-API, Backbone, and Underscores. Developed a number of WordPress plugins used internally."
+        "description": "Upgraded and optimized the Hongkiat.com website to follow modern web design standards. Revamped the WordPress theme used at Hongkiat.com with WP-API, Backbone, and Underscores. Developed a number of WordPress plugins used internally; but one of which has been released as an open source project."
       },
       "date": {
         "start":"2014",
@@ -173,40 +173,59 @@
   ],
   "skills": [
     {
-      "title": "WordPress",
-      "strength": "90%"
+      "label": "WordPress",
+      "confidence": "90",
+      "color": "#21759b"
     },
     {
-      "title": "PHP",
-      "strength": "60%"
+      "label": "PHP",
+      "confidence": "60",
+      "color": "#4f5b93"
     },
     {
-      "title": "HTML",
-      "strength":"60%"
+      "label": "MySQL",
+      "confidence": "10",
+      "color": "#0074a3"
     },
     {
-      "title": "CSS",
-      "strength": "70%"
+      "label": "HTML",
+      "confidence":"95",
+      "color": "#e34f26"
     },
     {
-      "title": "LESS",
-      "strength": "90%"
+      "label": "CSS",
+      "confidence": "85",
+      "color": "#0070bc"
     },
     {
-      "title": "Sass",
-      "strength": "50%"
+      "label": "Sass",
+      "confidence": "35",
+      "color": "#c6538c"
     },
     {
-      "title": "jQuery",
-      "strength": "75%"
+      "label": "LESS",
+      "confidence": "70",
+      "color": "#1d365d"
     },
     {
-      "title": "Backbone",
-      "strength": "50%"
+      "label": "JavaScript",
+      "confidence": "55",
+      "color": "#f0db4f"
     },
     {
-      "title": "Underscore",
-      "strength": "60%"
+      "label": "jQuery",
+      "confidence": "75",
+      "color": "#0769ad"
+    },
+    {
+      "label": "Underscore",
+      "confidence": "50",
+      "color": "#0071b5"
+    },
+    {
+      "label": "Backbone",
+      "confidence": "50",
+      "color": "#002a41"
     }
   ],
   "interests": [
