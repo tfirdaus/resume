@@ -157,12 +157,12 @@
   ],
   "volunteer": [
     {
-      "title": "General Translation Editor",
-      "description": "Translating WordPress projects to Indonesian",
+      "title": "Project Translation Editor",
+      "description": "Translating WordPress to Indonesian",
       "url": "https://translate.wordpress.org/locale/id/default/wp/dev",
       "organization": {
         "title": "WordPress",
-        "url": "https://translate.wordpress.org/",
+        "url": "https://make.wordpress.org/polyglots/teams/?locale=id_ID",
         "image": "./images/logo-wp.svg"
       },
       "date": {
