@@ -100,7 +100,14 @@
         "start":"2012",
         "end": "2014"
       },
-      "status": "( Remote, Freelance )"
+      "status": "( Remote, Freelance )",
+      "recommendations": [
+        {
+          "person": "Daniel Pataki",
+          "role": "Editor for WordPress Section",
+          "description": "Thoriq was the most thorough reviewer I worked with. Working with him was effortless, he has great communication skills and always delivered well before deadlines. His ability to spot little flaws in a wide range of topics, to go into detail where necessary was instrumental in publishing only high-quality material on the site."
+        }
+      ]
     },
     {
       "organization": {
