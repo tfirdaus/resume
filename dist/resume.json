@@ -124,7 +124,14 @@
         "start": "2011",
         "end": "2016"
       },
-      "status": "( Remote )"
+      "status": "( Remote )",
+      "recommendations": [
+        {
+          "person": "Ian Yates",
+          "role": "WebDesign Tuts+ Editor",
+          "description": "As editor of an education platform I value several things in a writer: in-depth knowledge, an ability to communicate complex ideas in a simple way, curiosity, openness, and reliability. Thoriq has delivered all these by the bucketload over the years we’ve worked together–I only wish it were easier to find more like him!."
+        }
+      ]
     },
     {
       "organization": {
