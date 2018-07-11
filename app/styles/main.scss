@@ -1,311 +1,381 @@
-@import '../../bower_components/normalize-scss/sass/normalize/import-now';
+// bower:scss
+// endbower
 
-$base-font-size: 22;
-$base-line-height: 1.5;
-$leading: $base-line-height * 1rem;
-$scale: 1.414;
-
-$primary: #56c1ab;
-$gray-dark: #333;
-$gray: #999;
-$gray-light: #eee;
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
 
 html {
-    font-family: serif;
-    font-size: $base-font-size / 16 * 100%;
-    -webkit-font-smoothing: antialiased;
-}
-p {
-    line-height: $leading;
-    margin-top: $leading;
-    margin-bottom: 0;
-}
-ul,
-ol {
-    margin-top: $leading;
-    margin-bottom: $leading;
-    li {
-        line-height: $leading;
-    }
-    ul,
-    ol {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-blockquote {
-    line-height: $leading;
-    margin-top: $leading;
-    margin-bottom: $leading;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: $leading;
-    margin-bottom: 0;
-    line-height: $leading;
-    font-weight: 700;
-}
-h1 {
-    font-size: 3 * $scale * 1rem;
-    line-height: 3 * $leading;
-    margin-top: 2 * $leading;
-}
-h2 {
-    font-size: 2 * $scale * 1rem;
-    line-height: 2 * $leading;
-    margin-top: 2 * $leading;
-}
-h3 {
-    font-size: 1 * $scale * 1rem;
-}
-h4 {
-    font-size: $scale / 2 * 1rem;
-}
-h5 {
-    font-size: $scale / 3 * 1rem;
-}
-h6 {
-    font-size: $scale / 4 * 1rem;
-}
-table {
-    margin-top: $leading;
-    border-spacing: 0px;
-    border-collapse: collapse;
-}
-td,
-th {
-    padding: 0;
-    line-height: $base-line-height * $base-font-size - 0px;
-}
-code {
-    vertical-align: bottom;
+  font-size: 16px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-html,
-body {
-  line-height: 1;
-  text-rendering: optimizeLegibility;
-  font-weight: 300;
-}
-html {
-  box-sizing: border-box;
-}
 body {
   background: #fafafa;
-  font-family: 'Roboto Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: $gray-dark;
-  font-weight: 400;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.lt,
+.gt {
+  color: #aab1c0;
+}
+.tag {
+  color: #ef596f;
 }
 
 .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 30px;
-  position: relative;
+  width: 840px;
+  margin: auto;
+  padding: 0 2em;
 }
 
-.sub-heading {
-  font-size: 0.8em;
-  margin: 0 0 15px;
-  color: $gray;
-  font-weight: 500;
-}
+#hero-unit {
+  color: #495162;
+  font-size: 1.8em;
+  background-color: #282c34;
+  font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
 
-.button {
-  background: transparent;
-  border: 3px solid $gray;
-  color: $gray;
-  text-decoration: none;
-  padding: 18px 42px;
-  &--primary {
-    color: #fff;
-    border-color: $primary;
-    background-color: $primary;
-    &:hover {
-      border-color: darken( $primary, 10% );
-      background-color: darken( $primary, 10% );
-    }
+  ol {
+    margin: 0;
+    padding: 1em 0;
+    list-style: decimal;
+    list-style: none;
+    counter-reset: code-lines;
   }
-}
 
-.row {
-  padding: 60px 0;
-  @media screen and (min-width: 640px) {
-    display: flex;
-  }
-  &:not(:last-child) {
-    border-bottom: 1px solid $gray-light;
-  }
-}
-
-.column.column-left {
-  width: 100%;
-  @media screen and (min-width: 640px) {
-    width: 30%;
-    padding-right: 30px;
-  }
-}
-.column.column-right {
-  width: 100%;
-  @media screen and (min-width: 640px) {
-    padding-left: 30px;
-  }
-}
-
-.social-media {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  a {
-    display: block;
-    &:hover svg {
-      fill: $gray-dark;
-    }
-  }
   li {
-    display: inline-block;
+    display: flex;
+    counter-increment: code-lines;
   }
-  svg {
-    width: 32px;
-    height: 32px;
-    fill: $gray;
+
+  li:before {
+    margin-right: 1em;
+    content: counter(code-lines);
   }
 }
 
-.site-header {
-  padding: 60px 0;
-  overflow: hidden;
-  position: relative;
-  .container {
+.tabs {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  background-color: #21252b;
+  font-size: 0.5em;
+  text-transform: lowercase;
+}
+
+.tab {
+  background-color: #282c34;
+  padding: 1em 1.2em;
+  display: inline-block;
+  color: #fff;
+}
+
+.heading,
+.sub-heading {
+  color: #bbbbbb;
+  h1, p {
+    font-weight: 400;
+    font-size: 1em;
+    display: inline;
+  }
+}
+
+.button-list {
+  padding: 0;
+  display: flex;
+  &__item {
+    padding: 0.5em 1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #586069;
+    border: 1px solid #e1e4e8;
+    display: block;
+    &:hover {
+      background-color: #f6f8fa;
+    }
+    &:first-of-type {
+      border-right: 0;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-of-type {
+      border-left: 0;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}
+
+#commits {
+  padding: 5em 0;
+  h2 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.commit-list {
+  font-size: 14px;
+  border-left: 2px solid #eff1f3;
+
+  &__item {
+    margin-top: 2em;
+  }
+}
+
+.commit-header {
+  color: #586069;
+  margin: 0 0 1em;
+  display: flex;
+  align-items: center;
+  transform: translate(-10px, -5px);
+}
+
+.commit-start {
+  padding: 3px 0;
+  margin-left: 0.8em;
+}
+
+.commit-title {
+  margin: 0 0 0.5em;
+}
+
+.commit-detail {
+  margin: 0;
+  line-height: 1.5;
+  color: #6a737d;
+}
+
+.commit-content {
+  padding: 1.2em;
+  border: 1px solid #eff1f3;
+  margin-left: 2em;
+}
+
+.commit-figure {
+  margin: 0;
+
+  img {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+
+    &:last-of-type:not(:only-child) {
+      transform: translateX(-10px);
+    }
+
+    &:only-child {
+      margin-right: 10px;
+    }
+  }
+
+  &__organization,
+  &__profile {
+    position: relative;
+  }
+
+  &__organization {
     z-index: 10;
   }
-  &__avatar {
-    margin: 0;
-    position: absolute;
-    transform: translate3d(0, 30%, 0);
+}
+
+.commit-footnote {
+  margin-top: 1em;
+  display: flex;
+  align-items: flex-start;
+  color: #586069;
+  > span {
+    margin-right: 4px;
   }
-  &__avatar img {
-    max-width: 100%;
-    height: auto;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  }
-  &__summary {
-    flex-wrap: wrap;
-    @media screen and (min-width: 640px) {
-      max-width: 80%;
-    }
-  }
-  &__title,
-  &__subtitle {
-    width: 100%;
-    flex: 0 1 100%;
-    line-height: normal;
-  }
-  &__title {
-    text-transform: uppercase;
-    margin: 0;
-    font-weight: 400;
-    font-size: 0.86em;
-  }
-  &__subtitle {
-    margin: 12px 0 0;
-    font-size: 2.34em;
-  }
-  &__description {
-    color: $gray;
-  }
-  .button {
+}
+
+.commit-status {
+  &__building {
     display: inline-block;
-    margin-top: 30px;
-  }
-  .particles-js-canvas-el {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    .icon-loading {
+      right: -24px;
+      top: 0;
+      position: absolute;
+      animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
   }
 }
 
-.site-content {
-  margin-top: 120px;
-  margin-bottom: 30px;
+.commit-slug {
+  text-transform: lowercase;
+  font-weight: 600;
 }
 
-.content-section {
-  &__header {
-    text-transform: uppercase;
-    font-size: 1.1em;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid $gray-light;
+.commit-tags {
+  margin-left: 1em;
+}
+
+.commit-tag {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  margin: 0 0.5em 0.5em 0;
+  white-space: nowrap;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.tag-design {
+  background-color: #fbca04;
+}
+
+.tag-ecommerce {
+  background-color: #bbf29d;
+}
+
+.tag-seo {
+  background-color: #bfd4f2;
+}
+
+.tag-writing {
+  background-color: #006b75;
+  color: #fff;
+}
+
+.tag-tips {
+  background-color: #d93f0b;
+  color: #fff;
+}
+
+.tag-tutorial {
+  background-color: #67dff7;
+}
+
+.tag-refactoring {
+  background-color: #0052cc;
+  color: #fff;
+}
+
+.tag-theme {
+  background-color: #ed2572;
+  color: #fff;
+}
+
+.tag-plugins {
+  background-color: #c9fb02;
+}
+
+.tag-ci-cd {
+  background-color: #5319e7;
+  color: #fff;
+}
+
+.tag-docker {
+  background-color: #0087c8;
+  color: #fff;
+}
+
+.tag-reviewing {
+  background-color: #655104;
+  color: #fff;
+}
+
+.tag-reviewing {
+  background-color: #655104;
+  color: #fff;
+}
+
+.tag-editing {
+  background-color: #0e8a16;
+  color: #fff;
+}
+
+.tag-translation {
+  background-color: #e99695;
+}
+
+.tag-support {
+  background-color: #563d7c;
+  color: #fff;
+}
+
+.tag-troubleshooting {
+  background-color: #f1e05a;
+}
+
+.tag-remote {
+  background-color: #cc317c;
+  color: #fff;
+}
+
+.tag-volunteer {
+  background-color: #bfdadc;
+}
+
+.tag-freelance {
+  background-color: #c2e0c6;
+}
+
+.tag-in-house {
+  background-color: #5319e7;
+  color: #fff;
+}
+
+.recommendation-list {
+  &__item {
+    margin: 0 0 2em;
+    padding-left: 2em;
+    border-left: 0.25em solid #dfe2e5;
   }
 }
-.employment {
-  &__recommendation {
-    margin-top: 60px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 0.75em;
-    margin-left: 0;
-    padding-left: 30px;
-    border-left: 3px solid $gray-light;
-    cite {
-      font-size: 0.85em;
-      margin-top: 15px;
-      display: block;
-      font-weight: 700;
-    }
+
+.recommendation-list-toggle {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline-offset: 3px;
+    outline: 1px solid #dfe2e5;
   }
 }
-.employment,
-.volunteer {
-  &__organization {
-    font-size: 1.1em;
-    margin: 0 0 7px 0;
-  }
-  &__organization-url {
-    text-decoration: none;
-    color: $gray-dark;
-    &:hover {
-      color: $primary;
-    }
-  }
+
+.icon-loading,
+.icon-commit,
+.icon-list {
+  width: 18px;
+  height: 18px;
 }
-.project,
-.volunteer {
-  &__title {
-    font-size: 1.1em;
-    margin: 0 0 7px 0;
-    font-weight: 700;
-  }
-  &__url {
-    text-decoration: none;
-    color: $gray-dark;
-    &:hover {
-      color: $primary;
-    }
-  }
-  &__organization-url {
-    text-decoration: none;
-    color: $gray;
-    &:hover {
-      color: $gray-dark;
-    }
-  }
+
+.icon-loading {
+  fill: #0e8a16;
+  margin-left: 0.5em;
+  padding: 2px;
+  border-radius: 50%;
+  animation: rotating 2s linear infinite;
 }
-.employment,
-.project,
-.volunteer {
-  &__logo {
-    max-width: 250px;
-    margin-bottom: 60px;
-  }
+
+.icon-commit {
+  background-color: #fafafa;
+  fill: #c6cbd1;
 }
-.skills {
-  padding: 60px 150px;
+
+.icon-list {
+  fill: #fff;
+  position: relative;
+  top: 4px;
+  margin-right: 6px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
